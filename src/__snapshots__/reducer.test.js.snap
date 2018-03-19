@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reducer debería detectar diagonal (0,0) -> (2,2) 1`] = `
+Object {
+  "currPlayer": "O",
+  "isDraw": false,
+  "matrix": Array [
+    Array [
+      "X",
+      "O",
+      null,
+    ],
+    Array [
+      "O",
+      "X",
+      null,
+    ],
+    Array [
+      null,
+      null,
+      "X",
+    ],
+  ],
+  "winner": "X",
+  "winnerCombination": Array [
+    Array [
+      0,
+      0,
+    ],
+    Array [
+      1,
+      1,
+    ],
+    Array [
+      2,
+      2,
+    ],
+  ],
+}
+`;
+
+exports[`reducer debería empezar con jugador X y cambiar turno después de mover 1`] = `
+Object {
+  "currPlayer": "O",
+  "isDraw": false,
+  "matrix": Array [
+    Array [
+      "X",
+      null,
+      null,
+    ],
+    Array [
+      null,
+      null,
+      null,
+    ],
+    Array [
+      null,
+      null,
+      null,
+    ],
+  ],
+  "winner": null,
+  "winnerCombination": false,
+}
+`;
+
+exports[`reducer debería marcar casilla de O en su turno 1`] = `
+Object {
+  "currPlayer": "X",
+  "isDraw": false,
+  "matrix": Array [
+    Array [
+      "X",
+      null,
+      null,
+    ],
+    Array [
+      "O",
+      null,
+      null,
+    ],
+    Array [
+      null,
+      null,
+      null,
+    ],
+  ],
+  "winner": null,
+  "winnerCombination": false,
+}
+`;
+
+exports[`reducer debería resetear estado cuando acción es RESET 1`] = `
+Object {
+  "currPlayer": "X",
+  "isDraw": null,
+  "matrix": Array [
+    Array [
+      null,
+      null,
+      null,
+    ],
+    Array [
+      null,
+      null,
+      null,
+    ],
+    Array [
+      null,
+      null,
+      null,
+    ],
+  ],
+  "winner": null,
+  "winnerCombination": null,
+}
+`;
+
+exports[`reducer debería retornar el estado inicial cuando no recibe estado 1`] = `
+Object {
+  "currPlayer": "X",
+  "isDraw": null,
+  "matrix": Array [
+    Array [
+      null,
+      null,
+      null,
+    ],
+    Array [
+      null,
+      null,
+      null,
+    ],
+    Array [
+      null,
+      null,
+      null,
+    ],
+  ],
+  "winner": null,
+  "winnerCombination": null,
+}
+`;
+
+exports[`reducer no debería dejar marcar una casilla ya marcada 1`] = `
+Object {
+  "currPlayer": "O",
+  "isDraw": false,
+  "matrix": Array [
+    Array [
+      null,
+      null,
+      null,
+    ],
+    Array [
+      null,
+      "X",
+      null,
+    ],
+    Array [
+      null,
+      null,
+      null,
+    ],
+  ],
+  "winner": null,
+  "winnerCombination": false,
+}
+`;
