@@ -17,7 +17,7 @@ export default props => (
         key={`row-${x}`}
         row={row}
         x={x}
-        onClick={(x, y) => () => props.move(x, y)}
+        move={props.move}
         winnerCombination={props.winnerCombination}
       />
     ))}

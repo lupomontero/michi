@@ -13,7 +13,7 @@ const styles = (isWinnerCombination) => ({
   },
 });
 
-export default ({ row, x, onClick, winnerCombination }) => (
+export default ({ row, x, move, winnerCombination }) => (
   <div>
     {row.map((value, y) => (
       <div
@@ -24,7 +24,7 @@ export default ({ row, x, onClick, winnerCombination }) => (
           ).cell
         }
         key={`cell-${x}-${y}`}
-        onClick={onClick(x, y)}
+        onClick={() => move(x, y)}
       >{value}</div>
     ))}
   </div>
